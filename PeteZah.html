@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<style>
+body {
+    background-image: url("brickwall.jpg"); background-position: center;
+}
+h1 {
+    color: rgb(255, 141, 65);
+    text-align: center;
+    font-family: fantasy;
+    font-size: 60px;
+    background-color: aliceblue;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+h2 {
+    text-align: center; font-family: fantasy;
+}
+h3 {
+    color:rgb(83, 102, 50); font-family: fantasy; font-size: 40px
+}
+h4 { 
+    color:rgb(107, 0, 0); font-family: fantasy; font-size: 40px
+} 
+pre { 
+    text-align: center; font-family: fantasy; font-size: 20px
+}
+img {
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 1));
+}
+.title-container {
+  display: flex; flex-direction: column; flex-wrap: wrap;
+}
+.image-container {
+  display: flex; gap: 50px; flex-direction: row; flex-wrap: wrap;
+}
+.image-item {
+  display: flex; flex-direction: row; text-align: center; flex-wrap: wrap;
+}
+@media (max-width: 350px) {
+  .image-item {flex-direction: row;}
+}
+.image-item img {
+  width: 350px; height: 250px; border-radius: 8px;
+}
+.image-item figcaption {
+  margin-top: 10px; font-size: 31px; color:rgb(107, 0, 0);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: aliceblue;
+  display: flex;
+  color:rgb(107, 0, 0); 
+  font-family: fantasy; 
+  font-size: 40px;
+  position: sticky;
+  top: 0;
+}
+ul li {
+    float: left;
+}
+ul li a { 
+  display: block; color: rgb(255, 141, 65); padding: 14px 16px; text-decoration: none;
+}
+ul li a:hover {
+  background-color: rgb(107, 0, 0);
+}
+</style>
+
+<title>Pete Zah's Pizza</title>
+</head>
+<div class="title-container">
+  <h1><img src="PeteZahLogo.png" alt="PeteZahLogo">
+    <ul>
+      <li><a href="PeteZah.html">Home</a></li>
+      <li><a href="default.asp">News</a></li>
+      <li><a href="default.asp">Menu</a></li>
+      <li><a href="default.asp">Contact</a></li>
+      <li><a href="aboutzah.html">About</a></li>
+    </ul>
+  </h1>
+</div>
+<div class="image-container">
+  <div class="image-item">
+    <img src="pizza1.png" alt="The Holy Pepper">
+    <figcaption>The Holy Pepper (10 Inch) - $11.99</figcaption>
+  </div>
+  <div class="image-item">
+    <img src="pizza2.png" alt="The Large Marge">
+    <figcaption>The Large Marge (16 Inch) - $17.99</figcaption>
+  </div>
+  <div class="image-item">
+    <img src="pizza3.png" alt="The Big Shroom">
+    <figcaption>The Big Shroom (10 Inch) - $11.99</figcaption>
+  </div>
+    <div class="image-item">
+    <img src="pizza4.png" alt="The Chicken Jockey">
+    <figcaption>The Chicken Jockey (10 Inch) - $11.99</figcaption>
+  </div>
+  <div class="image-item">
+    <img src="pizza6.png" alt="The Vampire Killer">
+    <figcaption>The Vampire Killer (10 Inch) - $11.99</figcaption>
+  </div>
+  <div class="image-item">
+    <img src="pizza5.webp" alt="The Roni Classic">
+    <figcaption>The Roni Classic (16 Inch) - $17.99</figcaption>
+  </div>
+</div>
+<br>
+
+</body>
+</html>
