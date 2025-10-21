@@ -1,0 +1,64 @@
+body {
+    background-image: url("brickwall.jpg"); background-position: center;
+}
+h1 {
+    color: rgb(255, 141, 65);
+    text-align: center;
+    font-family: fantasy;
+    font-size: 60px;
+    background-color: aliceblue;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+h2 {
+    text-align: center; font-family: fantasy;
+}
+h3 { 
+    color:rgb(107, 0, 0); font-family: fantasy; font-size: 40px
+} 
+pre { 
+    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 20px
+}
+img {
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 1));
+}
+.title-container {
+  display: flex; flex-direction: column; flex-wrap: wrap;
+}
+.image-container {
+  display: flex; gap: 50px; flex-direction: row; flex-wrap: wrap;
+}
+.image-item {
+  display: flex; flex-direction: row; text-align: center; flex-wrap: wrap;
+}
+@media (max-width: 350px) {
+  .image-item {flex-direction: row;}
+}
+.image-item img {
+  width: 350px; height: 250px; border-radius: 8px;
+}
+.image-item figcaption {
+  margin-top: 10px; font-size: 30px; color:rgb(107, 0, 0); font-family: fantasy;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: aliceblue;
+  display: flex;
+  color:rgb(107, 0, 0); 
+  font-family: fantasy; 
+  font-size: 40px;
+  position: sticky;
+  top: 0;
+}
+ul li {
+    float: left;
+}
+ul li a { 
+  display: block; color: rgb(255, 141, 65); padding: 14px 16px; text-decoration: none;
+}
+ul li a:hover {
+  background-color: rgb(107, 0, 0);
+}
