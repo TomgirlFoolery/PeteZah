@@ -10,16 +10,15 @@ h1 {
     margin-right: -10px;
     margin-left: -10px;
     -webkit-text-stroke: 1px rgb(107, 0, 0); 
-    text-stroke: 2px black;
 }
 h2 {
     text-align: center; font-family: fantasy;
 }
 h3 { 
-    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 40px; -webkit-text-stroke: 1px rgb(255, 141, 65); text-stroke: 2px black;
+    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 40px; -webkit-text-stroke: 1px rgb(255, 141, 65);
 } 
 pre { 
-    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 20px;
+    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 25px;
 }
 img {
     filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 1));
@@ -30,8 +29,14 @@ img {
 .image-container {
   display: flex; gap: 50px; flex-direction: row; flex-wrap: wrap;
 }
+.image-container2 {
+  display: flex; gap: 20px; flex-direction: column; flex-wrap: wrap;
+}
 .image-item {
   display: flex; flex-direction: row; text-align: center; flex-wrap: wrap;
+}
+.image-item2 {
+  display: flex; flex-direction: column; text-align: center; flex-wrap: wrap;
 }
 @media (max-width: 350px) {
   .image-item {flex-direction: row;}
@@ -40,7 +45,21 @@ img {
   width: 350px; height: 250px; border-radius: 8px;
 }
 .image-item figcaption {
-  margin-top: 10px; font-size: 30px; color:rgb(107, 0, 0); font-family: fantasy; -webkit-text-stroke: 1px rgb(255, 141, 65); text-stroke: 2px black;
+  margin-top: 10px; 
+  font-size: 30px; 
+  color:rgb(107, 0, 0); 
+  font-family: fantasy; 
+  -webkit-text-stroke: 1px rgb(255, 141, 65);
+}
+.image-item2 img {
+  border: 5px solid aliceblue;
+}
+.image-item2 figcaption {
+  margin-top: 10px;
+   font-size: 70px; 
+   color:rgb(107, 0, 0); 
+   font-family: fantasy; 
+   -webkit-text-stroke: 1px rgb(255, 141, 65);
 }
 ul {
     list-style-type: none;
@@ -55,14 +74,84 @@ ul {
     position: sticky;
     top: 0;
     -webkit-text-stroke: 1px rgb(107, 0, 0); 
-    text-stroke: 2px black;
 }
 ul li {
     float: left;
 }
 ul li a { 
-    display: block; color: rgb(255, 141, 65); padding: 14px 16px; text-decoration: none;
+    display: block; color: rgb(255, 141, 65); padding: 12px 14px; text-decoration: none;
 }
 ul li a:hover {
     background-color: rgb(107, 0, 0);
+}
+
+* {box-sizing:border-box
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.pizzaSlides {
+  display: none;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 70px; 
+  color:rgb(107, 0, 0); 
+  font-family: fantasy; 
+  -webkit-text-stroke: 1px rgb(255, 141, 65);
+}
+.numbertext {
+  color: aliceblue;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(107, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: rgb(255, 141, 65);
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

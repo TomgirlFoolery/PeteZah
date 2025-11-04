@@ -10,40 +10,67 @@
   <h1><img src="PeteZahLogo.png" alt="PeteZahLogo">
   <ul>
     <li><a href="PeteZah.html">Home</a></li>
-    <li><a href="default.asp">News</a></li>
-    <li><a href="default.asp">Menu</a></li>
-    <li><a href="default.asp">Contact</a></li>
+    <li><a href="newszah.html">News</a></li>
+    <li><a href="menuzah.html">Menu</a></li>
+    <li><a href="contactzah.html">Contact</a></li>
     <li><a href="aboutzah.html">About</a></li>
   </ul>
   </h1>
 </div>
-<div class="image-container">
-  <div class="image-item">
-    <img src="pizza1.png" alt="The Holy Pepper">
-    <figcaption>The Holy Pepper (10 Inch) - $11.99</figcaption>
+<div class="slideshow-container">
+  <div class="pizzaSlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="happyfamily.avif" style="width: 100%">
+    <div class="text">Families love it!</div>
   </div>
-  <div class="image-item">
-    <img src="pizza2.png" alt="The Large Marge">
-    <figcaption>The Large Marge (16 Inch) - $17.99</figcaption>
+  <div class="pizzaSlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="hungryman.jpg" style="width: 100%">
+    <div class="text">Winners of "Biggest Pizza Competition 2020"</div>
   </div>
-  <div class="image-item">
-    <img src="pizza3.png" alt="The Big Shroom">
-    <figcaption>The Big Shroom (10 Inch) - $11.99</figcaption>
+  <div class="pizzaSlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="happydelivery.webp" style="width: 100%;">
+    <div class="text">We deliver!</div>
   </div>
-    <div class="image-item">
-    <img src="pizza4.png" alt="The Chicken Jockey">
-    <figcaption>The Chicken Jockey (10 Inch) - $11.99</figcaption>
-  </div>
-  <div class="image-item">
-    <img src="pizza6.png" alt="The Vampire Killer">
-    <figcaption>The Vampire Killer (10 Inch) - $11.99</figcaption>
-  </div>
-  <div class="image-item">
-    <img src="pizza5.webp" alt="The Roni Classic">
-    <figcaption>The Roni Classic (16 Inch) - $17.99</figcaption>
-  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <br>
+<div style="text-align: center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("pizzaSlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 </body>
 </html>
