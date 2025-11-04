@@ -1,55 +1,112 @@
+/* css for my background image of bricks on all pages */
 body {
-    background-image: url("brickwall.jpg"); background-position: center;
+    background-image: url("brickwall.jpg"); 
+    background-position: center;
 }
+/* changes to my h1 tag such as font, colour, stroke and added margins, as wlel as background colour */
 h1 {
-    color: rgb(255, 141, 65);
-    text-align: center;
-    font-family: fantasy;
-    font-size: 60px;
-    background-color: aliceblue;
-    margin-right: -10px;
-    margin-left: -10px;
-    -webkit-text-stroke: 1px rgb(107, 0, 0); 
+  color: rgb(255, 141, 65);
+  text-align: center;
+  font-family: fantasy;
+  font-size: 60px;
+  background-color: aliceblue;
+  margin-right: -10px;
+  margin-left: -10px;
+  -webkit-text-stroke: 1px rgb(107, 0, 0); 
 }
+/* changes to my h2 tag */
 h2 {
-    text-align: center; font-family: fantasy;
+  color:rgb(255, 141, 65); 
+  text-align: center; 
+  font-family: fantasy; 
+  font-size: 25px; 
+  -webkit-text-stroke: 1px rgb(107, 0, 0);
 }
+/* changes to my h3 tag */
 h3 { 
-    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 40px; -webkit-text-stroke: 1px rgb(255, 141, 65);
+  color:rgb(107, 0, 0); 
+  text-align: center; 
+  font-family: fantasy; 
+  font-size: 40px; 
+  -webkit-text-stroke: 1px rgb(255, 141, 65);
 } 
+/* changes to my paragraphs */
+p {
+  color:rgb(107, 0, 0); 
+  text-align: center; 
+  font-family: fantasy; 
+  font-size: 20px;
+}
+/* changes to my pre tag */
 pre { 
-    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 20px;
+  color:rgb(107, 0, 0); 
+  text-align: center; 
+  font-family: fantasy; 
+  font-size: 20px;
 }
+/* adds black drop shadow to all images on my website */
 img {
-    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 1));
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 1));
 }
+/* the parent flexbox for my title */
 .title-container {
-  display: flex; flex-direction: column; flex-wrap: wrap;
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap;
 }
+/* the parent flexbox for the large bodies of text such as the menu */
 .body-container {
-  display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; gap: 100px;
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 100px;
 }
+/* flexchild for my paragraphs in the menu */
 .paragraph-item {
-  display: flex; flex-direction: column; text-align: center; flex-wrap: wrap;
+  display: flex; 
+  flex-direction: column; 
+  text-align: center; 
+  flex-wrap: wrap;
 }
+/* first image container for the pizza images on the menu that are are directed as rows */
 .image-container {
-  display: flex; gap: 50px; flex-direction: row; flex-wrap: wrap;
+  display: flex; 
+  gap: 50px; 
+  flex-direction: row; 
+  flex-wrap: wrap;
 }
+/* second image container for the news page that are directed in a column */
 .image-container2 {
-  display: flex; gap: 20px; flex-direction: column; flex-wrap: wrap;
+  display: flex; 
+  gap: 20px; 
+  flex-direction: column; 
+  flex-wrap: wrap;
 }
+/* flexchild for any images in a row*/
 .image-item {
-  display: flex; flex-direction: row; text-align: center; flex-wrap: wrap;
+  display: flex; 
+  flex-direction: row; 
+  text-align: center; 
+  flex-wrap: wrap;
 }
+/* flexchild for any images in a column */
 .image-item2 {
-  display: flex; flex-direction: column; text-align: center; flex-wrap: wrap;
+  display: flex; 
+  flex-direction: column; 
+  text-align: center; 
+  flex-wrap: wrap;
 }
+/* sets media max width to 350px */
 @media (max-width: 350px) {
   .image-item {flex-direction: row;}
 }
+/* makes all images in the flexchild a specific size */
 .image-item img {
   width: 350px; height: 250px; border-radius: 8px;
 }
+/* changes to all figcaption text */
 .image-item figcaption {
   margin-top: 10px; 
   font-size: 30px; 
@@ -57,9 +114,11 @@ img {
   font-family: fantasy; 
   -webkit-text-stroke: 1px rgb(255, 141, 65);
 }
+/* adds a border to these flexchild images */
 .image-item2 img {
   border: 5px solid aliceblue;
 }
+/* changes to all figcaption text in this flexbox */
 .image-item2 figcaption {
   margin-top: 10px;
    font-size: 70px; 
@@ -67,6 +126,7 @@ img {
    font-family: fantasy; 
    -webkit-text-stroke: 1px rgb(255, 141, 65);
 }
+/* creates the look and background for my navbar */
 ul {
     list-style-type: none;
     margin: 0;
@@ -81,26 +141,32 @@ ul {
     top: 0;
     -webkit-text-stroke: 1px rgb(107, 0, 0); 
 }
+/* makes my navbar float left */
 ul li {
     float: left;
 }
+/* adds padding and displays navbar as a block */
 ul li a { 
     display: block; color: rgb(255, 141, 65); padding: 12px 14px; text-decoration: none;
 }
+/* makes the icons turn red when hovering over them in the navbar */
 ul li a:hover {
     background-color: rgb(107, 0, 0);
 }
-
+/* creates border box for my slidehshow */
 * {box-sizing:border-box
 }
+/* flexbox parent for my slideshow */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
+/* hides images in slidehsow until needed */
 .pizzaSlides {
   display: none;
 }
+/* sets colours and properties of the cursor arrows on slideshow */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -115,13 +181,16 @@ ul li a:hover {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
+/* sets up the next image */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+/* turns the arrows darker when hovering over them */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
+/* sets up the text in the slidehsow */
 .text {
   position: absolute;
   bottom: 8px;
@@ -133,6 +202,7 @@ ul li a:hover {
   font-family: fantasy; 
   -webkit-text-stroke: 1px rgb(255, 141, 65);
 }
+/* sets the number text in the slideshow's position and colour */
 .numbertext {
   color: aliceblue;
   font-size: 12px;
@@ -140,6 +210,7 @@ ul li a:hover {
   position: absolute;
   top: 0;
 }
+/* makes dots at the bottom red and transition between images smoothly */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -150,14 +221,26 @@ ul li a:hover {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+/* makes hovering over the dots turn them orange and shows which image you're on */
 .active, .dot:hover {
   background-color: rgb(255, 141, 65);
 }
+/* sets the fade animation duration */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
+/* sets the keyframes for the animation of the fade */
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+/* adds background to my footer */
+footer {
+  background-color: aliceblue;
+  color: aliceblue;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
+  width: 100%;
 }

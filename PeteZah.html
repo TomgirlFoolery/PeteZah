@@ -2,12 +2,15 @@
 <html>
 <body>
 <head>
+  <!-- link to my css -->
   <link rel="stylesheet" href="PeteZah.css">
-
+<!-- The title of the site -->
 <title>Pete Zah's Pizza</title>
 </head>
+<!-- div containing the logo and navbar -->
 <div class="title-container">
   <h1><img src="PeteZahLogo.png" alt="PeteZahLogo">
+    <!-- each link in my navbar -->
   <ul>
     <li><a href="PeteZah.html">Home</a></li>
     <li><a href="newszah.html">News</a></li>
@@ -17,7 +20,14 @@
   </ul>
   </h1>
 </div>
+<!-- picture of a happy customer -->
+<h3 style="text-align: center">
+  <figcaption>ORDER TODAY AND THIS COULD BE YOU!</figcaption>
+  <img src="happycustomer.jpg" alt="A Happy Customer">
+</h3>
+<!-- container flexbox for my image slideshow -->
 <div class="slideshow-container">
+  <!-- div for the fade ccs and a picture in the slidehshow -->
   <div class="pizzaSlides fade">
     <div class="numbertext">1 / 3</div>
     <img src="happyfamily.avif" style="width: 100%">
@@ -33,28 +43,27 @@
     <img src="happydelivery.webp" style="width: 100%;">
     <div class="text">We deliver!</div>
   </div>
+  <!-- code for the arrows on my slidehsow -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <br>
+<!-- code for the dots underneath the slidehow to show what image you're on -->
 <div style="text-align: center">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-
+<!-- script to make slideshow go through all the images -->
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);
-
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("pizzaSlides");
@@ -72,5 +81,11 @@ function showSlides(n) {
 }
 </script>
 
+<br>
+<br>
+<!-- footer at the botom of page -->
+<footer>
+  <p>2025 Pete Zah's Pizza. All rights reserved</p>
+</footer>
 </body>
 </html>
