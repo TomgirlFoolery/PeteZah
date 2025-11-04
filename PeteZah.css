@@ -18,13 +18,19 @@ h3 {
     color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 40px; -webkit-text-stroke: 1px rgb(255, 141, 65);
 } 
 pre { 
-    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 25px;
+    color:rgb(107, 0, 0); text-align: center; font-family: fantasy; font-size: 20px;
 }
 img {
     filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 1));
 }
 .title-container {
   display: flex; flex-direction: column; flex-wrap: wrap;
+}
+.body-container {
+  display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; gap: 100px;
+}
+.paragraph-item {
+  display: flex; flex-direction: column; text-align: center; flex-wrap: wrap;
 }
 .image-container {
   display: flex; gap: 50px; flex-direction: row; flex-wrap: wrap;
